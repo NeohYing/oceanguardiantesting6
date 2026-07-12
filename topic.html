@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Guardian | Quiz</title>
+    <link rel="icon" href="Image/oceanguardianlogo.png" type="Image/oceanguardianlogo.ico">
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="brand-text-wrapper">
+                    <span class="brand-main">OCEAN</span>
+                    <span class="brand-sub">GUARDIAN</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu-links">
+                <li><a href="index.html#home" class="menu-item">Home</a></li>
+                <li><a href="about.html" class="menu-item">About</a></li>
+
+                <li class="nav-dropdown-wrapper">
+                    <a href="#topics" class="menu-item dynamic-trigger">
+                        Topics <i class='bx bx-chevron-down toggle-arrow'></i>
+                    </a>
+                    <ul class="dropdown-panel">
+                        <li><a href="endangeredmarineanimals.html"><i class='bx bx-grid-alt'></i> Endangered Marine Species</a></li>
+                        <li><a href="#ecosystems"><i class='bx bx-water'></i> Marine Ecosystems</a></li>
+                        <li><a href="#species"><i class='bx bx-dna'></i> Threats</a></li>
+                        <li><a href="#threats"><i class='bx bx-shield-quarter'></i> Conservation & Action</a></li>
+                        <li><a href="#threats"><i class='bx bx-book'></i> Conservation Success Stories</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="quiz.html" class="menu-item active">Quiz</a></li>
+                <li><a href="signupandlogin/dashboard.html" class="menu-item">Dashboard</a></li>
+
+                <!-- MOBILE SIGN UP -->
+                <li class="mobile-only-cta">
+                    <div class="mobile-nav-action-group" style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-top: 15px;">
+                        <a href="signupandlogin/login.html" class="nav-cta-block" id="mobile-auth-btn" style="margin: 0; flex: 1;">Log In</a>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="nav-action-group">
+                <a href="signupandlogin/login.html" class="nav-cta-block" id="auth-btn">Log In</a>
+                <a href="signupandlogin/dashboard.html" id="profile-btn" class="profile-btn"><i class="fa-solid fa-user"></i></a>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="page-layout-wrapper">
+
+        <!-- STICKY SIDEBAR -->
+        <aside class="topics-sidebar">
+            <div class="topic-group">
+                <h3>🐢 Endangered Marine Animals</h3>
+                <ul>
+                    <li><a href="endangeredmarineanimals.html">Endangered Marine Animals</a></li>
+                </ul>
+            </div>
+            <div class="topic-group" id="marine-ecosystem">
+                <h3>🌍 Marine Ecosystem</h3>
+                <ul>
+                    <li class="active"><a href="#marine-ecosystem">What is Marine Ecosystem?</a></li>
+                    <li><a href="#coral-reefs">Types of Marine Ecosystem</a></li>
+                    <li><a href="#ecosystem-matters">Why Marine Ecosystem Matters</a></li>
+                    <li><a href="#eco-threats">Threats</a></li>
+                    <li><a href="#eco-help">How You Can Help</a></li>
+                </ul>
+            </div>
+            <div class="topic-group" id="threats">
+                <h3>🌳 Threats They Face</h3>
+                <ul>
+                    <li><a href="#threats-info">Did You Know?</a></li>
+                    <li><a href="#humans">Human Caused Threats</a></li>
+                    <li><a href="#effects">Effects on Marine Life</a></li>
+                </ul>
+            </div>
+            <div class="topic-group" id="solution">
+                <h3>🌊 The Solution</h3>
+                <ul>
+                    <li><a href="#why">Why It Matters</a></li>
+                    <li><a href="#help">How You Can Help</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- MAIN KNOWLEDGE CONTENT -->
+        <main class="content-container">
+            
+            <section id="marine-ecosystem" class="content-section">
+                <h1 class="main-title">What is a Marine Ecosystem?</h1>
+                <p>A <strong>marine ecosystem</strong> is a dynamic saltwater environment where living communities (fish, mammals, microbes) interact with non-living elements (salinity, sunlight, nutrients). Covering over <strong>70% of the Earth's surface</strong>, these vast aquatic biomes drive global weather patterns, dictate water cycles, and form the biological baseline that makes terrestrial life possible.</p>
+            </section>
+
+            <hr class="section-divider">
+
+            <section id="coral-reefs" class="content-section">
+                <h2 class="section-title">Types of Marine Ecosystems</h2>
+                <p>From sunlit coastal shallows down to absolute abyssal darkness, ocean life adapts to distinct environmental boundaries:</p>
+                
+                <div class="ecosystem-grid">
+                    
+                    <div class="eco-card">
+                        <h3>1. Coral Reefs</h3>
+                        <p>The "rainforests of the sea." Built by calcium-secreting coral polyp colonies living symbiotically with photosynthetic zooxanthellae. Covering under 0.1% of the seafloor, they support 25% of all marine species.</p>
+                        <p class="key-species"><strong>Key Species:</strong> Hard corals, reef sharks, sea turtles, parrotfish.</p>
+                    </div>
+
+                    <div class="eco-card">
+                        <h3>2. Mangroves</h3>
+                        <p>Salt-tolerant estuarine forests that thrive along tropical shores. Their dense aerial roots physically secure shorelines against erosion, filter runoff sediments, and act as calm nurseries for young fish.</p>
+                        <p class="key-species"><strong>Key Species:</strong> Red mangroves, mudskippers, crabs, juvenile barracuda.</p>
+                    </div>
+
+                    <div class="eco-card">
+                        <h3>3. Seagrass Meadows</h3>
+                        <p>Vast underwater pastures of flowering plants in shallow coastal shelves. They trap loose sediments, buffer heavy wave energy, and function as vital, high-capacity "Blue Carbon" sinks.</p>
+                        <p class="key-species"><strong>Key Species:</strong> Dugongs, green sea turtles, seahorses, pipefish.</p>
+                    </div>
+
+                    <div class="eco-card">
+                        <h3>4. Kelp Forest</h3>
+                        <p>The expansive open water column beyond continental shelves. Driven entirely by microscopic, drifting phytoplankton that process solar energy to fuel the food web and produce the majority of global oxygen.</p>
+                        <p class="key-species"><strong>Key Species:</strong> Phytoplankton, skipjack tuna, blue whales, whale sharks.</p>
+                    </div>
+
+                    <div class="eco-card">
+                        <h3>5. Estuaries</h3>
+                        <p>Perpetual wilderness below 2,000 meters under freezing, high-pressure dark. Life subsists either on sinking organic debris ("marine snow") or through chemosynthesis around toxic hydrothermal vents.</p>
+                        <p class="key-species"><strong>Key Species:</strong> Anglerfish, giant isopods, rift tube worms, gulper eels.</p>
+                    </div>
+
+                    <div class="eco-card">
+                        <h3>6. Lagoons</h3>
+                        <p>The freezing, sea-ice-dominated waters of the Arctic and Southern Oceans. Spring ice melts trigger massive under-ice algae blooms, feeding dense layers of krill that sustain large marine mammals.</p>
+                        <p class="key-species"><strong>Key Species:</strong> Antarctic krill, polar bears, penguins, leopard seals.</p>
+                    </div>
+                    <div class="eco-card">
+                        <h3>7. Salt Marsh</h3>
+                        <p>The freezing, sea-ice-dominated waters of the Arctic and Southern Oceans. Spring ice melts trigger massive under-ice algae blooms, feeding dense layers of krill that sustain large marine mammals.</p>
+                        <p class="key-species"><strong>Key Species:</strong> Antarctic krill, polar bears, penguins, leopard seals.</p>
+                    </div>
+                    <div class="eco-card">
+                        <h3>8. Intertidal Zones</h3>
+                        <p>The freezing, sea-ice-dominated waters of the Arctic and Southern Oceans. Spring ice melts trigger massive under-ice algae blooms, feeding dense layers of krill that sustain large marine mammals.</p>
+                        <p class="key-species"><strong>Key Species:</strong> Antarctic krill, polar bears, penguins, leopard seals.</p>
+                    </div>
+                    <div class="eco-card">
+                        <h3>9. Ocean Surface</h3>
+                        <p>The freezing, sea-ice-dominated waters of the Arctic and Southern Oceans. Spring ice melts trigger massive under-ice algae blooms, feeding dense layers of krill that sustain large marine mammals.</p>
+                        <p class="key-species"><strong>Key Species:</strong> Antarctic krill, polar bears, penguins, leopard seals.</p>
+                    </div>
+                    <div class="eco-card">
+                        <h3>10. Deep Sea and Sea Floor</h3>
+                        <p>The freezing, sea-ice-dominated waters of the Arctic and Southern Oceans. Spring ice melts trigger massive under-ice algae blooms, feeding dense layers of krill that sustain large marine mammals.</p>
+                        <p class="key-species"><strong>Key Species:</strong> Antarctic krill, polar bears, penguins, leopard seals.</p>
+                    </div>
+                    <div class="eco-card">
+                        <h3>11. Large Marine Ecosystems</h3>
+                        <p>The freezing, sea-ice-dominated waters of the Arctic and Southern Oceans. Spring ice melts trigger massive under-ice algae blooms, feeding dense layers of krill that sustain large marine mammals.</p>
+                        <p class="key-species"><strong>Key Species:</strong> Antarctic krill, polar bears, penguins, leopard seals.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section id="ecosystem-matters" class="content-section">
+                <h2 class="section-title">Why Marine Ecosystems Matters</h2>
+                
+                <div class="info-callout blue-callout">
+                    <h3>Ecosystem Performance Highlight</h3>
+                    <p>Between 50% to 80% of Earth's atmospheric oxygen is generated directly by marine photosynthesizers—meaning every second breath you take comes from the ocean.</p>
+                </div>
+
+                <ul class="styled-list label-blue">
+                    <li><strong>Thermoregulation:</strong> Oceans absorb roughly 90% of excess global atmospheric heat and 30% of anthropogenic CO₂, buffering the planet against runaway warming.</li>
+                    <li><strong>Food Security:</strong> Marine networks support direct livelihoods for over 10% of humanity and serve as the primary source of animal protein for 3 billion people.</li>
+                    <li><strong>Coastal Defense:</strong> Living barriers like reef crests and mangrove fringes absorb up to 97% of incoming wave energy, safeguarding communities from extreme storms.</li>
+                </ul>
+            </section>
+
+            <hr class="section-divider">
+
+            <section id="eco-threats" class="content-section">
+                <h2 class="section-title">Threats</h2>
+                <p>Despite their massive scale, marine biomes face severe stress. The convergence of toxic industrial runoff, warming cycles, and unsustainable fishing practices has disrupted the delicate equilibrium of global ocean life.</p>
+            </section>
+
+            <hr class="section-divider">
+
+            <section id="eco-help" class="content-section">
+                <h2 class="section-title">How You Can Help</h2>
+                <p>Reversing the ocean crisis starts with small, deliberate shifts. Minimizing plastic garbage, adopting sustainable dietary sourcing, and curbing carbon footprints collectively lower the baseline pressure on wild ecosystems.</p>
+            </section>
+
+            <!-- DEEP DIVES USING LABELED STRUCTURAL CSS CLASS EXTENSIONS -->
+            <h1 id="threats-info" class="block-header red-text">🌳 Threats They Face</h1>
+            <p class="block-subtitle">An analytical breakdown of human-driven damage to marine networks.</p>
+
+            <section class="content-section">
+                <div class="info-callout orange-callout">
+                    <h3>Critical Statistical Forecast</h3>
+                    <p>Environmental models project that without strict baseline interventions, our oceans could hold <strong>more plastic waste than wild fish by total weight by 2050</strong>. Upward of 8 million metric tons enter the sea annually.</p>
+                </div>
+            </section>
+
+            <section id="humans" class="content-section">
+                <h2 class="subsection-title">Human Caused Threats</h2>
+                <ul class="styled-list label-red">
+                    <li><strong>Warming & Acidification:</strong> Trapped atmospheric greenhouse gases cause ocean warming—triggering destructive coral bleaching. Concurrently, high absorption of dissolved CO₂ lowers seawater pH, rendering shell-builders unable to grow.</li>
+                    <li><strong>Eutrophication & Pollutants:</strong> Fertilizer and sewage runoff floods coastal waters with nitrogen, fueling toxic algae blooms. As these blooms decay, oxygen is entirely depleted, creating barren aquatic "dead zones."</li>
+                    <li><strong>Overfishing & Bycatch:</strong> Modern fleets pull target species faster than biological recovery allows, while destructive gear permanently flattens seabed structures and captures unintended marine life.</li>
+                </ul>
+            </section>
+
+            <section id="effects" class="content-section">
+                <h2 class="subsection-title">Effects on Marine Life</h2>
+                <ul class="styled-list label-red">
+                    <li><strong>Habitat Fragmentation:</strong> As structural sanctuaries like reefs or mangroves crumble, specialized species lose their foraging domains, sparking localized collapses.</li>
+                    <li><strong>Trophic Cascades:</strong> Over-extracting apex predators removes critical top-down checks. This permits prey lines to explode, overgrazing underwater ecosystems like kelp beds.</li>
+                    <li><strong>Microplastic Toxification:</strong> Debris breaks down into toxic microparticles. Ingested by marine life, these particles bioaccumulate up the food chain, carrying chemical toxins to top consumers.</li>
+                </ul>
+            </section>
+
+            <h1 id="why" class="block-header teal-text">🌊 The Solution</h1>
+            <p class="block-subtitle">Remediation paths to preserve ocean baseline health.</p>
+
+            <section class="content-section">
+                <h2 class="subsection-title">Why It Matters</h2>
+                <p>Preserving our seas is an absolute requirement for civilizational survival. Beyond stabilizing the global climate, oceans regulate rain systems necessary for land agriculture and manage crucial global trading pathways. If marine biodiversity fails, global ecological balance breaks entirely.</p>
+            </section>
+
+            <section id="help" class="content-section">
+                <h2 class="subsection-title">How You Can Help</h2>
+                <ul class="styled-list label-teal">
+                    <li><strong>De-plasticize Lifestyles:</strong> Cut out single-use plastics like straws, bags, and water bottles. Switch to reusable alternatives and support local beach or river cleanups.</li>
+                    <li><strong>Enforce Sourcing Traceability:</strong> Utilize sustainable seafood guidelines to avoid purchasing products harvested via destructive fishing styles or unmanaged fisheries.</li>
+                    <li><strong>Decarbonize Activity:</strong> Optimize personal energy use, choose low-emission transit options, and support renewable energy shifts to mitigate the drivers of ocean acidification.</li>
+                    <li><strong>Back Regulated MPAs:</strong> Support legislative acts that build fully protected Marine Protected Areas (MPAs) to give damaged marine ecosystems the space to naturally regenerate.</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+
+    <script type="module" src="Javascript/auth.js"></script>
+    <script type="module" src="Javascript/app.js"></script>
+</body>
+</html>

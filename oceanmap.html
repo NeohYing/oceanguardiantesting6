@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Explore Marine Life Around The World</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: "Segoe UI", Arial, sans-serif;
+                background-color: #f4f7fc;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 1280px;
+                width: 95%;
+                gap: 50px;
+                padding: 20px;
+            }
+
+            /* Left Side Panel Style */
+            .content-box {
+                flex: 1;
+                max-width: 420px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+                color: #666666;
+                margin: 0;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: bold;
+            }
+
+            .title {
+                font-size: 42px;
+                line-height: 1.1;
+                color: #111111;
+                margin: 10px 0 20px 0;
+                font-weight: bold;
+            }
+
+            .title span {
+                color: #1592af;
+            }
+
+            .description {
+                font-size: 15px;
+                line-height: 1.6;
+                color: #444444;
+                margin-bottom: 35px;
+            }
+
+            /* Action Button Layout */
+            .btn {
+                display: inline-flex;
+                align-items: center;
+                background-color: #1db1d3;
+                color: #ffffff;
+                text-decoration: none;
+                padding: 12px 28px;
+                border-radius: 25px;
+                font-weight: bold;
+                font-size: 13px;
+                letter-spacing: 0.5px;
+                transition:
+                    background-color 0.2s,
+                    transform 0.1s;
+                cursor: pointer;
+                border: none;
+            }
+
+            .btn:hover {
+                background-color: #1592af;
+            }
+
+            .btn-arrow {
+                margin-left: 10px;
+                font-size: 16px;
+            }
+
+            /* Right Side Map Frame */
+            .map-box {
+                flex: 2;
+                width: 100%;
+                position: relative;
+            }
+
+            .map-wrapper {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 2 / 1;
+                border-radius: 16px;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+                background-color: #030712;
+            }
+
+            /* Your Exact Local Image Layer */
+            .map-bg {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            /* Ocean Text Badges calibrated for your image */
+            .ocean-text {
+                position: absolute;
+                color: #ffffff;
+                background-color: rgba(3, 7, 18, 0.65);
+                padding: 4px 10px;
+                border-radius: 4px;
+                font-weight: bold;
+                font-size: 1.1vw;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+                pointer-events: none;
+                user-select: none;
+                white-space: nowrap;
+                border: 1px solid rgba(255, 255, 255, 0.15);
+            }
+
+            /* Position tracking mapped to image geography coordinates */
+            #lbl-arctic {
+                top: 14%;
+                left: 52%;
+                transform: translateX(-50%);
+            }
+            #lbl-pacific {
+                top: 48%;
+                left: 14%;
+            }
+            #lbl-atlantic {
+                top: 44%;
+                left: 44%;
+            }
+            #lbl-indian {
+                top: 62%;
+                left: 72%;
+            }
+            #lbl-southern {
+                top: 75%;
+                left: 52%;
+                transform: translateX(-50%);
+            }
+
+            /* Interactive High-Contrast Map Pins */
+            .map-pin {
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                background-color: #ef4444;
+                border: 2px solid #ffffff;
+                border-radius: 50%;
+                cursor: pointer;
+                box-shadow: 0 0 10px rgba(239, 68, 68, 0.6);
+                transition:
+                    transform 0.2s,
+                    background-color 0.2s;
+                z-index: 10;
+            }
+
+            .map-pin:hover {
+                transform: scale(1.4);
+                background-color: #f59e0b;
+                box-shadow: 0 0 12px #f59e0b;
+            }
+
+            /* Precise Pin placements over your graphic layout coordinates */
+            #pin-arctic {
+                top: 24%;
+                left: 52%;
+                transform: translateX(-50%);
+            }
+            #pin-bermuda {
+                top: 58%;
+                left: 20%;
+            }
+            #pin-mariana {
+                top: 85%;
+                left: 51%;
+            }
+            #pin-barrier {
+                top: 72%;
+                left: 79%;
+            }
+            #pin-sundar {
+                top: 54%;
+                left: 51%;
+            }
+
+            /* Description HUD Box overlay frame */
+            .info-hud {
+                position: absolute;
+                bottom: 15px;
+                left: 15px;
+                right: 15px;
+                background-color: rgba(15, 23, 42, 0.95);
+                border-left: 4px solid #1db1d3;
+                border-radius: 6px;
+                padding: 12px 20px;
+                z-index: 20;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            }
+
+            .info-hud h3 {
+                margin: 0 0 4px 0;
+                color: #38bdf8;
+                font-size: 16px;
+            }
+
+            .info-hud p {
+                margin: 0;
+                color: #f8fafc;
+                font-size: 13px;
+                line-height: 1.4;
+            }
+
+            /* Responsive Breakpoint Layout tweaks */
+            @media (max-width: 900px) {
+                .container {
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 35px;
+                    padding: 40px 20px;
+                }
+                .content-box {
+                    max-width: 100%;
+                }
+                .ocean-text {
+                    font-size: 2.5vw;
+                    padding: 2px 6px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Left content column -->
+            <div class="content-box">
+                <h2 class="subtitle">Ocean Map</h2>
+                <h1 class="title">
+                    Explore Marine Life Around <span>The World</span>
+                </h1>
+                <p class="description">
+                    Explore endangered marine animals across the world's oceans
+                    and learn how conservation efforts are helping protect their
+                    future.
+                </p>
+                <button
+                    class="btn"
+                    onclick="
+                        showInfo(
+                            'Global Oceans',
+                            'Click any of the glowing red markers positioned across the map layers to explore specific points of environmental importance.',
+                        )
+                    "
+                >
+                    VIEW THE MAP <span class="btn-arrow">&rarr;</span>
+                </button>
+            </div>
+
+            <!-- Right map column -->
+            <div class="map-box">
+                <div class="map-wrapper">
+                    <!-- Your exact world map picture loaded locally -->
+                    <img
+                        src="Image/ocean_map.png"
+                        alt="Your Custom Satellite World Map"
+                        class="map-bg"
+                    />
+
+                    <!-- Text Overlay Layer Labels -->
+                    <div class="ocean-text" id="lbl-arctic">Arctic Ocean</div>
+                    <div class="ocean-text" id="lbl-pacific">Pacific Ocean</div>
+                    <div class="ocean-text" id="lbl-atlantic">
+                        Atlantic Ocean
+                    </div>
+                    <div class="ocean-text" id="lbl-indian">Indian Ocean</div>
+                    <div class="ocean-text" id="lbl-southern">
+                        Southern Ocean
+                    </div>
+
+                    <!-- Interactive Target Pins -->
+                    <div
+                        class="map-pin"
+                        id="pin-arctic"
+                        onclick="
+                            showInfo(
+                                'Arctic Ocean',
+                                'The smallest and shallowest ocean, covered continuously by drifting pack ice in the North Polar region.',
+                            )
+                        "
+                    ></div>
+                    <div
+                        class="map-pin"
+                        id="pin-bermuda"
+                        onclick="
+                            showInfo(
+                                'Bermuda Triangle',
+                                'A famous western North Atlantic region where historical shipping route vessels disappeared.',
+                            )
+                        "
+                    ></div>
+                    <div
+                        class="map-pin"
+                        id="pin-mariana"
+                        onclick="
+                            showInfo(
+                                'Mariana Trench',
+                                'Located in the Western Pacific, this is verified as the deepest oceanic trench zone on Earth.',
+                            )
+                        "
+                    ></div>
+                    <div
+                        class="map-pin"
+                        id="pin-barrier"
+                        onclick="
+                            showInfo(
+                                'Great Barrier Reef',
+                                'The largest coral reef ecosystem complex containing thousands of unique biodiverse marine organisms.',
+                            )
+                        "
+                    ></div>
+                    <div
+                        class="map-pin"
+                        id="pin-sundar"
+                        onclick="
+                            showInfo(
+                                'Sundarbans Marine',
+                                'A massive tidal halophytic mangrove habitat key to conserving vulnerable coastal wildlife.',
+                            )
+                        "
+                    ></div>
+                </div>
+            </div>
+
+            <div class="info-hud" id="hudFrame">
+                <h3 id="hudTitle">Select a Location</h3>
+                <p id="hudDesc">
+                    Click any red glowing marker on the map interface to view
+                    its environmental and geographical details.
+                </p>
+            </div>
+        </div>
+
+        <!-- Processing Script Logic without external dependencies -->
+        <script>
+            function showInfo(title, description) {
+                document.getElementById("hudTitle").innerText = title;
+                document.getElementById("hudDesc").innerText = description;
+            }
+        </script>
+    </body>
+</html>
+
+<!-- IGNORE (for now)-->

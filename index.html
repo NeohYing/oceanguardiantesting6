@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Guardian | Home</title>
+    <link rel="icon" href="Image/oceanguardianlogo.png" type="Image/oceanguardianlogo.ico">
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="brand-text-wrapper">
+                    <span class="brand-main">OCEAN</span>
+                    <span class="brand-sub">GUARDIAN</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu-links">
+                <li><a href="index.html#home" class="menu-item active">Home</a></li>
+                <li><a href="about.html" class="menu-item">About</a></li>
+
+                <li class="nav-dropdown-wrapper">
+                    <a href="#topics" class="menu-item dynamic-trigger">
+                        Topics <i class='bx bx-chevron-down toggle-arrow'></i>
+                    </a>
+                    <ul class="dropdown-panel">
+                        <li><a href="endangeredmarineanimals.html"><i class='bx bx-grid-alt'></i> Endangered Marine Species</a></li>
+                        <li><a href="topic.html#marine-ecosystem"><i class='bx bx-water'></i> Marine Ecosystems</a></li>
+                        <li><a href="topic.html#threats"><i class='bx bx-dna'></i> Threats</a></li>
+                        <li><a href="topic.html#solution"><i class='bx bx-shield-quarter'></i> Conservation & Action</a></li>
+                        <li><a href="#threats"><i class='bx bx-book'></i> Conservation Success Stories</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="quiz.html" class="menu-item">Quiz</a></li>
+                <li><a href="signupandlogin/dashboard.html" class="menu-item">Dashboard</a></li>
+
+                <!-- MOBILE SIGN UP -->
+                <li class="mobile-only-cta">
+                    <div class="mobile-nav-action-group" style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-top: 15px;">
+                        <a href="signupandlogin/login.html" class="nav-cta-block" id="mobile-auth-btn" style="margin: 0; flex: 1;">Log In</a>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="nav-action-group">
+                <a href="signupandlogin/login.html" class="nav-cta-block" id="auth-btn">Log In</a>
+                <a href="signupandlogin/dashboard.html" id="profile-btn" class="profile-btn"><i class="fa-solid fa-user"></i></a>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="ocean-hero" id="home">
+        <div class="hero-inner">
+            <span class="sub-heading" data-aos="fade-up" data-aos-duration="1000">PROTECTING OCEAN LIFE</span>
+            <h1 data-aos="fade-up" data-aos-duration="1000">Protect Our Oceans, Preserve Our Future</h1>
+            <p class="hero-intro" data-aos="fade-up" data-aos-duration="1000">Discover marine species, explore ocean ecosystems, understand environmental threats, and learn how everyone can help create a healthier future for our oceans.</p>
+            
+            <div class="hero-actions">
+                <a href="topic.html" class="hero-primary-btn">Explore Marine Topics</a>
+                <a href="quiz.html" class="hero-secondary-btn">Test Your Knowledge</a>
+            </div>
+
+            <div class="stats-bar" data-aos="fade-up">
+                <div class="stat-box">
+                    <h3>1000+</h3>
+                    <p>marine species at risk</p>
+                </div>
+                <div class="stat-box">
+                    <h3>71%</h3>
+                    <p>of Earth's surface is covered by oceans</p>
+                </div>
+                <div class="stat-box">
+                    <h3>11M+</h3>
+                    <p>metric tons of plastic enter the ocean every year</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="our-mission" id="our-mission">
+        <div class="our-mission-content site-section">
+
+            <div class="mission-image">
+                <img src="Image/homepageourmission.png" alt="Woman holding a sea turtle">
+            </div>
+
+            <div class="mission-text">
+                <span class="mission-subtitle" data-aos="fade-up" data-aos-duration="1000">Our Mission</span>
+                <h2 data-aos="fade-up" data-aos-duration="1000">Many <span class="mission-highlight">Marine Species</span><br> Face Extinction</h2>
+                <p data-aos="fade-up" data-aos-duration="1200">Plastic pollution, overfishing, habitat destruction, and climate change are threatening <span class="mission-highlight">marine life around the world.</span> As a result, many species face <span class="mission-highlight">declining populations</span> and an <span class="mission-highlight">uncertain future.</span></p>
+                <h3 class="mission-subtitle-two" data-aos="fade-up" data-aos-duration="1200">Our objective is to:</h3>
+
+                <div class="mission-item" data-aos="fade-up" data-aos-duration="1400">
+                    <i class="bx bxs-megaphone"></i>
+                    <p>Raise awareness about endangered marine species</p>
+                </div>
+
+                <div class="mission-item" data-aos="fade-up" data-aos-duration="1600">
+                    <i class="bx bxs-shield"></i>
+                    <p>Encourage action that doesn't harm marine life</p>
+                </div>
+
+                <div class="mission-item" data-aos="fade-up" data-aos-duration="1800">
+                    <i class="bx bx-water"></i>
+                    <p>Promote ocean conservation through everyday actions</p>
+                </div>
+
+                <a href="about.html#about" class="mission-btn" data-aos="fade-up" data-aos-duration="1000">LEARN MORE <i class="fas fa-long-arrow-alt-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="site-section bg-light" id="explore-map-section">
+        <div class="section-container map-container">
+            <canvas id="bubbles-canvas"></canvas>
+            <!-- Left Column -->
+            <div class="map-content">
+                <span class="map-subtitle">Ocean Map</span>
+
+                <h2 class="map-title">
+                    Explore Marine Life Around
+                    <span>The World</span>
+                </h2>
+
+                <p class="map-description">
+                    Explore endangered marine animals across the world's oceans and
+                    learn how conservation efforts are helping protect their future.
+                </p>
+
+                <a href="oceanmap.html" class="map-btn">
+                    VIEW THE MAP
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Right Column -->
+            <div class="map-box">
+                <div class="map-wrapper">
+                    <img src="Image/ocean_map.png" class="map-bg" alt="Ocean Map" />
+
+                    <!-- Ocean Labels -->
+                    <div class="ocean-text" id="lbl-arctic">Arctic Ocean</div>
+                    <div class="ocean-text" id="lbl-pacific">Pacific Ocean</div>
+                    <div class="ocean-text" id="lbl-atlantic">Atlantic Ocean</div>
+                    <div class="ocean-text" id="lbl-indian">Indian Ocean</div>
+                    <div class="ocean-text" id="lbl-southern">Southern Ocean</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="site-section" id="threats-banner-section" style="padding: 40px 0;">
+        <div class="section-container" style="background-color: #edfaff; border-radius: 32px; padding: 50px 40px; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+            
+            <!-- Side Callout Header -->
+            <div style="flex: 1; min-width: 280px;">
+                <span style="font-family: ' Poppins', sans-serif; font-size: 0.95rem; color: #4a5568; font-weight: 500; display: block; margin-bottom: 5px;">Threat To Marine Life</span>
+                <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.3rem; font-weight: 800; color: #0f2a4a; line-height: 1.15; margin-bottom: 15px;">
+                    Our Ocean Face Many Challenges
+                </h2>
+                <p style="font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: #4a5568; line-height: 1.5; margin-bottom: 25px;">
+                    Learn about the human activities and environmental challenges putting marine life at risk.
+                </p>
+                <a href="#topics" style="display: inline-flex; align-items: center; background-color: #59c2e6; color: #0f2a4a; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.85rem; padding: 12px 28px; border-radius: 30px; text-decoration: none; letter-spacing: 0.5px;">
+                    LEARN MORE <i class="fa-solid fa-arrow-right" style="margin-left: 10px; font-size: 0.8rem;"></i>
+                </a>
+            </div>
+            
+            <!-- Cards Track Grid Area -->
+            <div style="flex: 2; min-width: 480px; display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 15px;">
+                
+                <!-- Challenge Box 1: Plastic Pollution -->
+                <div style="background: linear-gradient(rgba(11, 35, 64, 0.45), rgba(11, 35, 64, 0.85)), url('Image/plasticpollution.jpg') center/cover; padding: 25px 20px; border-radius: 20px; min-height: 270px; display: flex; flex-direction: column; justify-content: flex-start; gap: 15px; box-shadow: 0 10px 25px rgba(15, 42, 74, 0.15);">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <span style="background: rgba(255, 255, 255, 0.2); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.95rem;"><i class="fa-solid fa-bottle-water"></i></span>
+                        <h4 style="font-family: 'Plus Jakarta Sans', sans-serif; color: white; margin: 0; font-size: 0.95rem; font-weight: 700;">Plastic Pollution</h4>
+                </div>
+                <p style="font-family: 'Poppins', sans-serif; color: rgba(255,255,255,0.85); font-size: 0.82rem; line-height: 1.5; margin: 0;">Millions of tons of plastic enter the ocean each year, harming marine animals and damaging ecosystems.</p>
+            </div>
+
+            <!-- Challenge Box 2: Overfishing -->
+            <div style="background: linear-gradient(rgba(11, 35, 64, 0.45), rgba(11, 35, 64, 0.85)), url('Image/overfishing.jpg') center/cover; padding: 25px 20px; border-radius: 20px; min-height: 270px; display: flex; flex-direction: column; justify-content: flex-start; gap: 15px; box-shadow: 0 10px 25px rgba(15, 42, 74, 0.15);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="background: rgba(255, 255, 255, 0.2); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.95rem;"><i class="fa-solid fa-fish"></i></span>
+                    <h4 style="font-family: 'Plus Jakarta Sans', sans-serif; color: white; margin: 0; font-size: 0.95rem; font-weight: 700;">Overfishing</h4>
+                </div>
+                <p style="font-family: 'Poppins', sans-serif; color: rgba(255,255,255,0.85); font-size: 0.82rem; line-height: 1.5; margin: 0;">Unsustainable fishing reduces fish populations, disrupts food chains, and threatens marine biodiversity.</p>
+            </div>
+
+            <!-- Challenge Box 3: Climate Change -->
+            <div style="background: linear-gradient(rgba(11, 35, 64, 0.45), rgba(11, 35, 64, 0.85)), url('Image/coralreef.jpg') center/cover; padding: 25px 20px; border-radius: 20px; min-height: 270px; display: flex; flex-direction: column; justify-content: flex-start; gap: 15px; box-shadow: 0 10px 25px rgba(15, 42, 74, 0.15);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="background: rgba(255, 255, 255, 0.2); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.95rem;"><i class="fa-solid fa-temperature-high"></i></span>
+                    <h4 style="font-family: 'Plus Jakarta Sans', sans-serif; color: white; margin: 0; font-size: 0.95rem; font-weight: 700;">Climate Change</h4>
+                </div>
+                <p style="font-family: 'Poppins', sans-serif; color: rgba(255,255,255,0.85); font-size: 0.82rem; line-height: 1.5; margin: 0;">Rising ocean temperatures and acidification damage marine habitats and threaten countless species.</p>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+
+        <div class="info-card" style="display: flex; align-items: center; gap: 40px; margin-bottom: 60px; flex-wrap: wrap;">
+
+            <div class="info-image" style="flex: 1; min-width: 300px; height: 350px; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
+                <img src="Image/take-action.jpg" alt="Take Action" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+
+            <div class="info-content" style="flex: 1; min-width: 300px;">
+
+                <span class="info-tag" style="display: inline-flex; align-items: center; gap: 6px; background-color: #e3f2fd; color: #0f2a4a; padding: 6px 16px; border-radius: 20px; font-family: 'Poppins', sans-serif; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px;">
+                    <i class="fa-solid fa-heart" style="color: #59c2e6;"></i>
+                    Take Action
+                </span>
+
+                <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; font-weight: 800; color: #0f2a4a; line-height: 1.2; margin-bottom: 20px;">Why It Matters &<br>How You Can Help</h2>
+
+                <p style="font-family: 'Poppins', sans-serif; color: #4a5568; line-height: 1.6; margin-bottom: 25px;">
+                    Learn why marine life matters and discover simple
+                    ways you can help protect our oceans and endangered
+                    species.
+                </p>
+
+                <div class="info-list" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px;">
+                    <div class="item" style="display: flex; align-items: center; gap: 10px; font-family: 'Poppins', sans-serif; color: #0f2a4a; font-weight: 500;">
+                        <i class="fa-solid fa-earth-americas" style="color: #59c2e6;"></i>
+                        <span>Why your actions matter</span>
+                    </div>
+
+                    <div class="item" style="display: flex; align-items: center; gap: 10px; font-family: 'Poppins', sans-serif; color: #0f2a4a; font-weight: 500;">
+                        <i class="fa-solid fa-fish" style="color: #59c2e6;"></i>
+                        <span>Ways to help marine life</span>
+                    </div>
+                </div>
+
+                <a href="#" class="info-btn" style="display: inline-flex; align-items: center; background-color: #0f2a4a; color: white; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.85rem; padding: 14px 32px; border-radius: 30px; text-decoration: none; letter-spacing: 0.5px;">
+                    TAKE ACTION
+                    <i class="fa-solid fa-arrow-right" style="margin-left: 10px; font-size: 0.8rem;"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="info-card reverse" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap-reverse;">
+
+            <div class="info-content" style="flex: 1; min-width: 300px;">
+
+                <span class="info-tag" style="display: inline-flex; align-items: center; gap: 6px; background-color: #e3f2fd; color: #0f2a4a; padding: 6px 16px; border-radius: 20px; font-family: 'Poppins', sans-serif; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px;">
+                    <i class="fa-solid fa-book-open" style="color: #59c2e6;"></i>
+                    Stories
+                </span>
+
+                <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; font-weight: 800; color: #0f2a4a; line-height: 1.2; margin-bottom: 20px;">Marine Conservation<br>Success Stories</h2>
+
+                <p style="font-family: 'Poppins', sans-serif; color: #4a5568; line-height: 1.6; margin-bottom: 25px;">
+                    Learn about the conservation efforts that have worked.
+                    Protecting marine life actually makes a difference.
+                </p>
+
+                <div class="info-list" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px;">
+                    <div class="item" style="display: flex; align-items: center; gap: 10px; font-family: 'Poppins', sans-serif; color: #0f2a4a; font-weight: 500;">
+                        <i class="fa-solid fa-circle-info" style="color: #59c2e6;"></i>
+                        <span>Conservation success stories</span>
+                    </div>
+
+                    <div class="item" style="display: flex; align-items: center; gap: 10px; font-family: 'Poppins', sans-serif; color: #0f2a4a; font-weight: 500;">
+                        <i class="fa-solid fa-water" style="color: #59c2e6;"></i>
+                        <span>Species recovery efforts</span>
+                    </div>
+                </div>
+
+                <a href="#" class="info-btn" style="display: inline-flex; align-items: center; background-color: #0f2a4a; color: white; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.85rem; padding: 14px 32px; border-radius: 30px; text-decoration: none; letter-spacing: 0.5px;">
+                    MORE STORIES
+                    <i class="fa-solid fa-arrow-right" style="margin-left: 10px; font-size: 0.8rem;"></i>
+                </a>
+            </div>
+
+            <div class="info-image" style="flex: 1; min-width: 300px; height: 350px; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
+                <img src="Image/conservation-success-stories.jpg" alt="Marine Conservation Success Stories" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+        <p>
+            © 2026 Ocean Guardian • All rights reserved<br>
+            <a class="footer-credit" href="credits.html">Credits</a>
+        </p>
+    </footer>
+
+    <script type="module" src="Javascript/auth.js"></script>
+    <script type="module" src="Javascript/app.js"></script>
+    <script>
+    AOS.init({
+        duration:800,
+        once:true
+    });
+    </script>
+</body>
+</html>

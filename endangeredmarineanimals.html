@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Guardian | Endangered Marine Life</title>
+    <link rel="icon" href="Image/oceanguardianlogo.png" type="Image/oceanguardianlogo.ico">
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Google <model-viewer> 3D Engine Library -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="brand-text-wrapper">
+                    <span class="brand-main">OCEAN</span>
+                    <span class="brand-sub">GUARDIAN</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu-links">
+                <li><a href="index.html#home" class="menu-item">Home</a></li>
+                <li><a href="about.html" class="menu-item">About</a></li>
+
+                <li class="nav-dropdown-wrapper">
+                    <a href="#topics" class="menu-item dynamic-trigger active">
+                        Topics <i class='bx bx-chevron-down toggle-arrow'></i>
+                    </a>
+                    <ul class="dropdown-panel">
+                        <li><a href="endangeredmarineanimals.html"><i class='bx bx-grid-alt'></i> Endangered Marine Species</a></li>
+                        <li><a href="topic.html#marine-ecosystem"><i class='bx bx-water'></i> Marine Ecosystems</a></li>
+                        <li><a href="topic.html#threats"><i class='bx bx-dna'></i> Threats</a></li>
+                        <li><a href="topic.html#solution"><i class='bx bx-shield-quarter'></i> Conservation & Action</a></li>
+                        <li><a href="#threats"><i class='bx bx-book'></i> Conservation Success Stories</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="quiz.html" class="menu-item">Quiz</a></li>
+                <li><a href="signupandlogin/dashboard.html" class="menu-item">Dashboard</a></li>
+
+                <!-- MOBILE SIGN UP -->
+                <li class="mobile-only-cta">
+                    <div class="mobile-nav-action-group" style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-top: 15px;">
+                        <a href="signupandlogin/login.html" class="nav-cta-block" id="mobile-auth-btn" style="margin: 0; flex: 1;">Log In</a>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="nav-action-group">
+                <a href="signupandlogin/login.html" class="nav-cta-block" id="auth-btn">Log In</a>
+                <a href="signupandlogin/dashboard.html" id="profile-btn" class="profile-btn"><i class="fa-solid fa-user"></i></a>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="marine-life" id="top">
+        <div class="marine-header section-header" style="padding-top: 60px; text-align: center;" data-aos="fade-up">
+            <p class="section-tag">DIVE DEEPER</p>
+            <h2>ENDANGERED<br>MARINE LIFE</h2>
+            <p class="marine-description">
+                Discover marine species facing extinction and learn why they need our protection.
+            </p>
+        </div>
+
+        <div class="wave-divider">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#7ed6ff" fill-opacity="1" d="M0,96L48,106.7C96,117,192,139,288,160C384,181,480,203,576,213.3C672,224,768,224,864,202.7C960,181,1056,139,1152,122.7C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+
+        <div class="ocean-content">
+            
+            <div class="ocean-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pacific">Pacific Ocean</button>
+                <button class="filter-btn" data-filter="atlantic">Atlantic Ocean</button>
+                <button class="filter-btn" data-filter="indian">Indian Ocean</button>
+                <button class="filter-btn" data-filter="southern">Southern Ocean</button>
+                <button class="filter-btn" data-filter="arctic">Arctic Ocean</button>
+            </div>
+
+        <!-- Animals -->
+
+        <!-- SUNLIGHT ZONE-->
+        <section class="zone-section">
+        <h1 class="zone-text" data-aos="fade-up">SUNLIGHT ZONE</h1>
+        <p class="zone-description" data-aos="fade-up">
+            Extending from the ocean's surface to about <strong>200 meters</strong>, the Sunlight Zone receives enough sunlight for plants and plankton to grow. It is the most productive ocean layer, supporting coral reefs, seagrass meadows, and the majority of marine life.
+        </p>
+        
+        <!-- Polar Bear -->
+        <div class="animal-row" data-ocean="arctic">
+            <div class="model-box">
+                <model-viewer
+                    src="3DModel/polar_bear.glb"
+                    alt="Polar Bear"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1" data-aos="fade-right">
+                </model-viewer>
+                <h3 data-aos="fade-up">Polar Bear</h3>
+            </div>
+
+            <div class="animal-info">
+
+                <h2>Polar Bear</h2>
+                <p class="scientific">Ursus maritimus</p>
+
+                <div class="vulnerable-status">Vulnerable</div>
+
+                <div class="info-icons">
+
+                    <div>
+                        <span class="icon">📍</span>
+                        <p>
+                            <strong>Habitat</strong><br>
+                            Arctic sea ice across Canada, Alaska, Russia, Greenland, and Norway
+                        </p>
+                    </div>
+
+                    <div>
+                        <span class="icon">🌍</span>
+                        <p>
+                            <strong>Distribution</strong><br>
+                            Arctic Oceans
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="animal-section">
+                    <h4>Why They Matter</h4>
+                    <p>
+                        Balance the Arctic food chain and serve as a warning sign of climate change.
+                    </p>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Main Threats</h4>
+                    <ul>
+                        <li>Climate Change</li>
+                        <li>Commercial & Industrial Activity</li>
+                        <li>Human-Wildlife Conflict</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hawksbill Turtle -->
+        <div class="animal-row reverse" data-ocean="pacific atlantic indian" data-aos="fade-up">
+            <div class="model-box">
+                <model-viewer
+                    src="3DModel/hawksbill_turtle.glb"
+                    alt="Hawksbill Turtle"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1"
+                    style="width: 100%; height: 300px;" data-aos="fade-left">
+                </model-viewer>
+                <h3 data-aos="fade-up">Hawksbill Turtle</h3>
+            </div>
+
+            <div class="animal-info">
+                <h2>Hawksbill Turtle</h2>
+                <p class="scientific">Eretmochelys imbricata</p>
+                <div class="status">Critically Endangered</div>
+
+                <div class="info-icons">
+                    <div>
+                        <span class="icon">📍</span>
+                        <p><strong>Habitat</strong><br>Tropical Coral Reefs</p>
+                    </div>
+                    <div>
+                        <span class="icon">🌍</span>
+                        <p><strong>Distribution</strong><br>Pacific, Atlantic & Indian Oceans</p>
+                    </div>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Why They Matter</h4>
+                    <p>Helps maintain healthy coral reefs by controlling sponge populations.</p>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Main Threats</h4>
+                    <ul>
+                        <li>Illegal Wildlife Trade</li>
+                        <li>Habitat Degradation</li>
+                        <li>Fishing Bycatch</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dugong -->
+        <div class="animal-row" data-ocean="pacific indian">
+            <div class="model-box">
+                <model-viewer
+                    src="3DModel/dugong.glb"
+                    alt="Dugong"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1" data-aos="fade-right">
+                </model-viewer>
+
+                <h3 data-aos="fade-up">Dugong</h3>
+            </div>
+
+            <div class="animal-info">
+
+                <h2>Dugong</h2>
+                <p class="scientific">Dugong dugon</p>
+
+                <div class="vulnerable-status">Vulnerable</div>
+
+                <div class="info-icons">
+
+                    <div>
+                        <span class="icon">📍</span>
+                        <p>
+                            <strong>Habitat</strong><br>
+                            Shallow, warm coastal waters with seagrass meadows.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span class="icon">🌍</span>
+                        <p>
+                            <strong>Distribution</strong><br>
+                            Indian and western Pacific Oceans
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="animal-section">
+                    <h4>Why They Matter</h4>
+                    <p>
+                        Maintain healthy seagrass habitats that support many marine animals.
+                    </p>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Main Threats</h4>
+                    <ul>
+                        <li>Habitat Loss and Degradation</li>
+                        <li>Accidental Entanglement</li>
+                        <li>Boat Strikes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vaquita -->
+        <div class="animal-row reverse" data-ocean="pacific">
+            <div class="model-box">
+                <model-viewer
+                    src="3DModel/vaquita_phocoena_sinus.glb"
+                    alt="Vaquita"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1"
+                    style="width: 100%; height: 300px;" data-aos="fade-left">
+                </model-viewer>
+                <h3 data-aos="fade-up">Vaquita</h3>
+                <div class="animal-fact" data-aos="fade-up">
+                    <span>💡 Fun Fact:</span><br>
+                    The vaquita is the world's smallest porpoise and one of the rarest marine mammals.
+                </div>
+            </div>
+
+            <div class="animal-info">
+                <h2>Vaquita</h2>
+                <p class="scientific">Phocoena sinus</p>
+                <div class="status">Critically Endangered</div>
+
+                <div class="info-icons">
+                    <div>
+                        <span class="icon">📍</span>
+                        <p><strong>Habitat</strong><br>Shallow Coastal Waters</p>
+                    </div>
+                    <div>
+                        <span class="icon">🌍</span>
+                        <p><strong>Distribution</strong><br>Northern Gulf of California</p>
+                    </div>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Why They Matter</h4>
+                    <p>Vaquitas help maintain balance in marine food webs by feeding on fish and squid.</p>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Main Threats</h4>
+                    <ul>
+                        <li>Illegal Gillnet Fishing</li>
+                        <li>Bycatch</li>
+                        <li>Habitat Disturbance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- North Atlantic Right Whale -->
+        <div class="animal-row" data-ocean="atlantic">
+            <div class="model-box">
+                <model-viewer
+                    src="3DModel/north_atlantic_right_whale.glb"
+                    alt="North Atlantic Right Whale"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1"
+                    style="width: 100%; height: 300px;" data-aos="fade-right">
+                </model-viewer>
+                <h3 data-aos="fade-up">North Atlantic Right Whale</h3>
+            </div>
+
+            <div class="animal-info">
+                <h2>North Atlantic Right Whale</h2>
+                <p class="scientific">Eubalaena glacialis</p>
+                <div class="status">Critically Endangered</div>
+
+                <div class="info-icons">
+                    <div>
+                        <span class="icon">📍</span>
+                        <p><strong>Habitat</strong><br>Temperate and subpolar coastal waters of the North Atlantic Ocean.</p>
+                    </div>
+                    <div>
+                        <span class="icon">🌍</span>
+                        <p><strong>Distribution</strong><br>Atlantic Ocean</p>
+                    </div>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Why They Matter</h4>
+                    <p>North Atlantic right whales play a vital role in maintaining the health and resilience of the marine ecosystem. Their waste brings essential nutrients.</p>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Main Threats</h4>
+                    <ul>
+                        <li>Fishing Gear Entanglement</li>
+                        <li>Climate Change</li>
+                        <li>Ocean Noise</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Whale Shark-->
+        <div class="animal-row reverse" data-ocean="pacific atlantic indian">
+            <div class="model-box">
+                <model-viewer
+                    src="3DModel/model_99a_-_whale_shark.glb"
+                    alt="Whale Shark"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1"
+                    style="width: 100%; height: 300px;" data-aos="fade-left">
+                </model-viewer>
+                <h3 data-aos="fade-up">Whale Shark</h3>
+                <div class="animal-fact" data-aos="fade-up">
+                    <span>💡 Fun Fact:</span><br>
+                    Every whale shark has a unique pattern of white spots, just like a human fingerprint.
+                </div>
+            </div>
+
+            <div class="animal-info">
+                <h2>Whale Shark</h2>
+                <p class="scientific">Rhincodon typus</p>
+                <div class="endangered-status">Endangered</div>
+
+                <div class="info-icons">
+                    <div>
+                        <span class="icon">📍</span>
+                        <p><strong>Habitat</strong><br>Tropical and Warm-Temperate Oceans</p>
+                    </div>
+                    <div>
+                        <span class="icon">🌍</span>
+                        <p><strong>Distribution</strong><br>Pacific, Atlantic and Indian Ocean</p>
+                    </div>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Why They Matter</h4>
+                    <p>They are the world's largest filter-feeding fish and help maintain healthy plankton communities.</p>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Main Threats</h4>
+                    <ul>
+                        <li>Climate Change</li>
+                        <li>Habitat Degradation and Pollution</li>
+                        <li>Vessel Strikes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blue Whale -->
+        <div class="animal-row" data-ocean="pacific atlantic indian southern">
+            <div class="model-box">
+                <model-viewer
+                    src="3DModel/blue_whale_-_textured.glb"
+                    alt="Blue Whale"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1" data-aos="fade-left">
+                </model-viewer>
+
+                <h3 data-aos="fade-up">Blue Whale</h3>
+                <div class="animal-fact" data-aos="fade-up">
+                    <span>💡 Fun Fact:</span><br>
+                    The blue whale is the largest animal ever known to have lived on Earth.
+                </div>
+            </div>
+
+            <div class="animal-info">
+
+                <h2>Blue Whale</h2>
+                <p class="scientific">Balaenoptera musculus</p>
+
+                <div class="endangered-status">Endangered</div>
+
+                <div class="info-icons">
+
+                    <div>
+                        <span class="icon">📍</span>
+                        <p>
+                            <strong>Habitat</strong><br>
+                            Every ocean except the Arctic Ocean
+                        </p>
+                    </div>
+
+                    <div>
+                        <span class="icon">🌍</span>
+                        <p>
+                            <strong>Distribution</strong><br>
+                            Pacific, Atlantic, Indian & Southern Oceans
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="animal-section">
+                    <h4>Why They Matter</h4>
+                    <p>
+                        Regulate krill populations and recycle nutrients that support healthy marine ecosystems.
+                    </p>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Main Threats</h4>
+                    <ul>
+                        <li>Vessel Strikes</li>
+                        <li>Entanglement in Fishing Gear</li>
+                        <li>Climate Change and Habitat Loss</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sei Whale -->
+        <div class="animal-row reverse" data-ocean="southern atlantic pacific indian">
+            <div class="model-box">
+                <model-viewer
+                    src="3DModel/sei_whale.glb"
+                    alt="Sei Whale"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1" data-aos="fade-left">
+                </model-viewer>
+
+                <h3 data-aos="fade-up">Sei Whale</h3>
+            </div>
+
+            <div class="animal-info">
+
+                <h2>Sei Whale</h2>
+                <p class="scientific">Balaenoptera borealis</p>
+
+                <div class="endangered-status">Endangered</div>
+
+                <div class="info-icons">
+
+                    <div>
+                        <span class="icon">📍</span>
+                        <p>
+                            <strong>Habitat</strong><br>
+                            Temperate and subpolar waters
+                        </p>
+                    </div>
+
+                    <div>
+                        <span class="icon">🌍</span>
+                        <p>
+                            <strong>Distribution</strong><br>
+                            Pacific, Southern, Atlantic & Indian Ocean
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="animal-section">
+                    <h4>Why They Matter</h4>
+                    <p>
+                        Fertilize the ocean with nutrients, trap massive amounts of carbon, and maintain the balance of marine food webs.
+                    </p>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Main Threats</h4>
+                    <ul>
+                        <li>Vessel Strikes</li>
+                        <li>Fishing Gear Entanglement</li>
+                        <li>Climate Change</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Basking Shark -->
+        <div class="animal-row" data-ocean="pacific atlantic southern">
+            <div class="model-box">
+                <model-viewer
+                    src="3DModel/basking_shark.glb"
+                    alt="Basking Shark"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1"
+                    style="width: 100%; height: 300px;" data-aos="fade-right">
+                </model-viewer>
+                <h3 data-aos="fade-up">Basking Shark</h3>
+                <div class="animal-fact" data-aos="fade-up">
+                    <span>💡 Fun Fact:</span><br>
+                    Basking sharks are the second-largest fish in the world and are filter feeders that consume large amounts of plankton.
+                </div>
+            </div>
+
+            <div class="animal-info">
+                <h2>Basking Shark</h2>
+                <p class="scientific">Cetorhinus maximus</p>
+                <div class="endangered-status">Endangered</div>
+
+                <div class="info-icons">
+                    <div>
+                        <span class="icon">📍</span>
+                        <p><strong>Habitat</strong><br>
+                            Coastal waters, continental shelves, and offshore temperate oceans
+                        </p>
+                    </div>
+                    <div>
+                        <span class="icon">🌍</span>
+                        <p><strong>Distribution</strong><br>
+                            Pacific, Atlantic & Southern Oceans
+                        </p>
+                    </div>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Why They Matter</h4>
+                    <p>Basking sharks help regulate plankton populations, support marine food webs, and keep ocean ecosystems healthy.</p>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Main Threats</h4>
+                    <ul>
+                        <li>Entanglement in Fishing Gear</li>
+                        <li>Collisions with Vessels</li>
+                        <li>Historical Hunting and Modern Harassment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- TWILIGHT ZONE -->
+
+        <section class="zone-section">
+        <h1 class="zone-text" data-aos="fade-up">TWILIGHT ZONE</h1>
+        <p class="zone-description" data-aos="fade-up">
+            Between <strong>200 and 1,000 meters</strong>, sunlight becomes too weak for photosynthesis, making this layer much darker. Many predators and deep-diving animals travel through the Twilight Zone to hunt, while some species migrate between the surface and these depths each day.
+        </p>
+
+        <!-- Great White Shark-->
+        <div class="animal-row reverse" data-ocean="pacific atlantic indian">
+
+            <div class="model-box">
+                <model-viewer
+                    src="3DModel/great_white_shark.glb"
+                    alt="Great White Shark"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1" data-aos="fade-right">
+                </model-viewer>
+                <h3 data-aos="fade-up">Great White Shark</h3>
+
+                <div class="animal-fact depth-box" data-aos="fade-up" style="margin-top: 10px;">
+                    <span>🌌 Deep Diving Record:</span><br>
+                    Max Depth: 979 meters (3,212 feet). They track fast prey near the surface but plunge straight to the bottom of the Twilight Zone.
+                </div>
+            </div>
+
+            <div class="animal-info">
+
+                <h2>Great White Shark</h2>
+                <p class="scientific">Carcharodon carcharias</p>
+
+                <div class="vulnerable-status">Vulnerable</div>
+
+                <div class="info-icons">
+
+                    <div>
+                        <span class="icon">📍</span>
+                        <p>
+                            <strong>Habitat</strong><br>
+                            Coastal and offshore oceans
+                        </p>
+                    </div>
+
+                    <div>
+                        <span class="icon">🌍</span>
+                        <p>
+                            <strong>Distribution</strong><br>
+                            Pacific, Atlantic & Indian Oceans
+                        </p>
+                    </div>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Why They Matter</h4>
+                    <p>
+                        Apex predators that keep marine ecosystems balanced by controlling prey populations.
+                    </p>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Main Threats</h4>
+                    <ul>
+                        <li>Commercial Bycatch</li>
+                        <li>Targeted Hunting and Poaching</li>
+                        <li>Habitat Degradation and Climate Change</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shortfin Mako -->
+        <div class="animal-row" data-ocean="pacific atlantic indian">
+            <div class="model-box">
+                <model-viewer
+                    src="3DModel/shortfin_mako_shark.glb"
+                    alt="Shortfin Mako"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1"
+                    style="width: 100%; height: 300px;" data-aos="fade-left">
+                </model-viewer>
+                <h3 data-aos="fade-up">Shortfin Mako Shark</h3>
+                <div class="animal-fact" data-aos="fade-up">
+                    <span>💡 Fun Fact:</span><br>
+                    The shortfin mako shark is the fastest shark in the world, capable of swimming at speeds of up to 74 km/h (46 mph)!
+                </div>
+
+                <div class="animal-fact" data-aos="fade-up" style="margin-top: 10px;">
+                    <span>🌌 Deep Diving Record:</span><br>
+                    Roughly 900 meters (2,950 feet) down into the Twilight Zone to chase fast-moving prey like squid.
+                </div>
+            </div>
+
+            <div class="animal-info">
+                <h2>Shortfin Mako Shark</h2>
+                <p class="scientific">Isurus oxyrinchus</p>
+                <div class="endangered-status">Endangered</div>
+
+                <div class="info-icons">
+                    <div>
+                        <span class="icon">📍</span>
+                        <p><strong>Habitat</strong><br>Temperate and tropical offshore waters</p>
+                    </div>
+                    <div>
+                        <span class="icon">🌍</span>
+                        <p><strong>Distribution</strong><br>Pacific, Atlantic & Indian Oceans </p>
+                    </div>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Why They Matter</h4>
+                    <p>Shortfin mako sharks are apex predators that help maintain healthy marine ecosystems by regulating fish populations and preserving balance in the ocean food web.</p>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Main Threats</h4>
+                    <ul>
+                        <li>Commercial Overfishing</li>
+                        <li>Accidental Bycatch</li>
+                        <li>Recreational/Sport Fishing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Emperor Penguin -->
+        <div class="animal-row reverse" data-ocean="southern">
+            <div class="model-box">
+                <model-viewer
+                    src="3DModel/low_poly_emperor_penguin.glb"
+                    alt="Emperor Penguin"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1"
+                    style="width: 100%; height: 300px;" data-aos="fade-left">
+                </model-viewer>
+                <h3 data-aos="fade-up">Emperor Penguin</h3>
+
+                <div class="animal-fact depth-box" data-aos="fade-up">
+                    <span>🌌 Deep Diving Record:</span><br>
+                    Max Depth: 565 meters (1,850 feet). They breathe air at the surface but plunge deep into the Twilight Zone for up to 28 minutes to hunt.
+                </div>
+            </div>
+
+            <div class="animal-info">
+                <h2>Emperor Penguin</h2>
+                <p class="scientific">Aptenodytes forsteri</p>
+                <div class="near-threatened-status">Near Threatened</div>
+
+                <div class="info-icons">
+                    <div>
+                        <span class="icon">📍</span>
+                        <p><strong>Habitat</strong><br>Antarctic sea ice and surrounding Southern Ocean.</p>
+                    </div>
+                    <div>
+                        <span class="icon">🌍</span>
+                        <p><strong>Distribution</strong><br>Southern Ocean and Antarctica </p>
+                    </div>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Why They Matter</h4>
+                    <p>They consume massive quantities of fish, squid, and krill, which keeps mid-level marine populations in check. They are also a major food source for apex predators of the region.</p>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Main Threats</h4>
+                    <ul>
+                        <li>Sea Ice Loss</li>
+                        <li>Food Scarcity</li>
+                        <li>Ocean Acidification</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scalloped Hammerhead Shark -->
+        <div class="animal-row" data-ocean="pacific atlantic indian">
+
+            <div class="model-box">
+                <model-viewer
+                    src="3DModel/scalloped_hammerhead_juvenile_low_poly.glb"
+                    alt="Scalloped Hammerhead Shark"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1" data-aos="fade-right">
+                </model-viewer>
+
+                <h3 data-aos="fade-up">Scalloped Hammerhead Shark</h3>
+            </div>
+
+            <div class="animal-info">
+
+                <h2>Scalloped Hammerhead Shark</h2>
+                <p class="scientific">Sphyrna lewini</p>
+
+                <div class="status">Critically Endangered</div>
+
+                <div class="info-icons">
+
+                    <div>
+                        <span class="icon">📍</span>
+                        <p>
+                            <strong>Habitat</strong><br>
+                            Coastal waters, coral reefs, continental shelves, and offshore islands.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span class="icon">🌍</span>
+                        <p>
+                            <strong>Distribution</strong><br>
+                            Pacific, Atlantic & Indian Oceans
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="animal-section">
+                    <h4>Why They Matter</h4>
+                    <p>
+                        Scalloped hammerhead sharks help maintain healthy marine ecosystems by controlling prey populations and keeping the ocean food web balanced.
+                    </p>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Main Threats</h4>
+                    <ul>
+                        <li>Targeted Commercial Fishing</li>
+                        <li>Accidental Bycatch</li>
+                        <li>Biological Vulnerability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        </section>
+
+        <!-- MIDNIGHT ZONE -->
+        <section class="zone-section">
+        <h1 class="zone-text" data-aos="fade-up">MIDNIGHT ZONE</h1>
+        <p class="zone-description" data-aos="fade-up">
+            Beyond <strong>1,000 meters</strong>, the ocean is completely dark, with freezing temperatures and immense pressure. Only specially adapted deep-sea creatures and remarkable divers, such as the sperm whale, regularly explore this mysterious zone.
+        </p>
+
+        <!-- Sperm Whale -->
+        <div class="animal-row reverse" data-ocean="pacific indian atlantic southern arctic">
+            <div class="model-box">
+                <model-viewer
+                    src="3DModel/sperm_whale.glb"
+                    alt="Sperm Whale"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1"
+                    style="width: 100%; height: 300px;" data-aos="fade-left">
+                </model-viewer>
+                <h3 data-aos="fade-up">Sperm Whale</h3> 
+                
+                <div class="animal-fact" data-aos="fade-up">
+                    <span>🌌 Deep Diving Record:</span><br>
+                    Up to 3,000 meters (9,840 feet). They must surface to breathe, but plunge to the Midnight Zone to hunt giant squid!
+                </div>
+            </div>
+
+            <div class="animal-info">
+                <h2>Sperm Whale</h2>
+                <p class="scientific">Physeter macrocephalus</p>
+                <div class="vulnerable-status">Vulnerable</div>
+
+                <div class="info-icons">
+                    <div>
+                        <span class="icon">📍</span>
+                        <p><strong>Habitat</strong><br>Deep offshore waters and oceanic trenches worldwide.</p>
+                    </div>
+                    <div>
+                        <span class="icon">🌍</span>
+                        <p><strong>Distribution</strong><br>Worldwide (except polar ice caps)</p>
+                    </div>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Why They Matter</h4>
+                    <p> By consuming vast numbers of medium and large squid, they prevent these aggressive predators from overpopulating and decimating smaller fish stocks.</p>
+                </div>
+
+                <div class="animal-section">
+                    <h4>Main Threats</h4>
+                    <ul>
+                        <li>Marine Debris</li>
+                        <li>Changing Environmental Conditions</li>
+                        <li>Oil Spills and Contaminants</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </section>
+        
+
+        <div class="deep-facts">
+
+            <p data-aos="fade-up">
+                The deeper you go into the ocean, the less we know! Midnight Zone, The Abyss, and Trenches are among the least explored places on Earth, so many deep-sea animals have not even been fully studied yet.
+            </p>
+
+            <p data-aos="fade-up" data-aos-delay="300">
+                The deepest ocean zones contain fewer known endangered species—not necessarily because they're safer, but because many animals living there have not been studied enough to assess their conservation status.
+            </p>
+        </div>
+
+        <div class="deep-cta">
+            <a href="quiz.html" class="deep-btn primary-btn">
+                <i class='bx bx-brain'></i>
+                Take the Quiz
+            </a>
+
+            <a href="#top" class="deep-btn secondary-btn">
+                <i class='bx bx-up-arrow-alt'></i>
+                Back to Top
+            </a>
+        </div>
+    </div>
+    </section>
+
+    <footer class="footer">
+        <p>
+            © 2026 Ocean Guardian • All rights reserved<br>
+            <a class="footer-credit" href="credits.html">Credits</a>
+        </p>
+    </footer>
+
+    <script type="module" src="Javascript/auth.js"></script>
+    <script type="module" src="Javascript/app.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 150,
+            once: true
+        });
+    </script>
+</body>
+</html>
